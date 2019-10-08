@@ -3,6 +3,7 @@ body {
     font-size: 14px;
     color: $color_dark-shade-75;
     line-height: 1;
+    box-sizing: border-box;
 }
 
 
@@ -43,5 +44,9 @@ h3 {
 
 a {
     display: inline-block;
+    text-decoration: none;
 }
 
+span {
+    display: inline-block;
+}

@@ -38,3 +38,14 @@
     src: $src;
   }
 }
+
+@mixin background($imgpath,$position: center,$repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    repeat: $repeat;
+  }
+}
+.testing {
+  @include background('/my/img/path.png');
+}

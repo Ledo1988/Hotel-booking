@@ -6,7 +6,14 @@ $color_dark-shade-25:  rgba(31, 32, 65, 0.25);
 $color_dark-shade-5:   rgba(31, 32, 65, 0.05);
 $color_purple:         #BC9CFF;
 $color_green:          #6FCF97;
+$color_white:          #ffffff;
 
 //Fonts
 $font_main-bold:      "Montserrat-Bold";
-$font_main-regular:      "Montserrat-Regular";
+$font_main-regular:   "Montserrat-Regular";
+
+//Blocks
+$max-content:         1160px;
+
+//Animation
+$transition:          .2s ease-in-out;
