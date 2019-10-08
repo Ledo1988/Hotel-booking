@@ -1,6 +1,30 @@
+mixin link(href, name)
+	//- attributes == {class: "btn"}
+	a(class!=attributes.class href=href)= name
+
 mixin btn-purple(href, name)
 	a(class='btn-purple' href=href)= name
 
 mixin btn-transparent(href, name)
 	a(class='btn-transparent' href=href)
 		span=name
+
+mixin btn-link(href, name)
+	a(class='btn-link' href=href)= name
+
+mixin btn-long(href, name)
+	a(class='btn-long' href=href)
+		span=name
+
+mixin menu-item(name, href)
+	li
+		a(href=href)= name
+
+mixin menu-item__sub(name, href, className)
+	li
+		a(href=href class='menu-main__sub-link')
+			span=name
+		div(class='menu-main__sub' class=className)
+			ul.menu-main__sub-list
+				block
+

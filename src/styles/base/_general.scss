@@ -43,10 +43,15 @@ h3 {
 }
 
 a {
+    color: $color_dark-shade-75;
     display: inline-block;
     text-decoration: none;
 }
 
 span {
     display: inline-block;
+}
+
+ul {
+    list-style: none;
 }
