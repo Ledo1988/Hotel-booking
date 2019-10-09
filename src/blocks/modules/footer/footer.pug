@@ -1,3 +1,10 @@
-p
-  | The pipe always goes at the beginning of its own line,
-  | not counting indentation.
+footer
+  .footer__wrap
+    .footer-menu__wrap
+        include ../../components/footer-with-logo/footer-with-logo.pug
+        include ../footer-menu/footer-menu
+        include ../../components/footer-email-form/footer-email-form.pug
+
+    .footer-copyright__wrap
+        include ../../components/footer-copyright/footer-copyright.pug
+
