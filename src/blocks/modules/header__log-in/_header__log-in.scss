@@ -22,13 +22,27 @@ header {
       flex-grow: 1;
     }
 
-    .nav-bar__btns {
+    .nav-bar__login {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
 
-      .btn-transparent {
-        margin-right: 20px;
+      a {
+        color: $color_dark-shade-50;
+        margin-left: 30px;
+        transition: $transition;
+
+        &:hover{
+          color: $color_dark-shade-75;
+        }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        height: 30px;
+        width: 1px;
+        background-color: rgba(31, 32, 65, 0.1);
       }
     }
 

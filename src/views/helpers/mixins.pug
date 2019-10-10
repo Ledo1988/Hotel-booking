@@ -2,9 +2,16 @@ mixin img(src, width, height, title)
 	//- attributes == {class: "btn"}
 	img(src=src width=width height=height title=title)
 
-mixin link(href, name)
-	//- attributes == {class: "btn"}
-	a(class!=attributes.class href=href)= name
+mixin link-with-img (href, className, src, width, height, title)
+	a(href=href class=className)
+		img(src=src width=width height=height title=title)
+
+mixin link(href, className, name)
+	a(class=className href=href)= name
+
+mixin link-with-span(href, className, name)
+	a(class=className href=href)
+		span= name
 
 mixin btn-purple(href, name)
 	a(class='btn-purple' href=href)= name
@@ -32,14 +39,8 @@ mixin menu-item__sub(name, href, className)
 			ul.menu-main__sub-list
 				block
 
-mixin title-link(name, href)
-	a(href=href class='title-link')= name
-
 mixin input(idName, value, type, name, required, placeholder)
-	label(for=idName)
-		input(id=idName value=value type=type name=name required=required placeholder=placeholder)
+	.label-content
+		label(for=idName)
+			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
 
-mixin link-with-img (href, src, width, height, title)
-	//- attributes == {class: "btn"}
-	a(href=href)
-		img(src=src width=width height=height title=title)
