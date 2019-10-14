@@ -44,3 +44,12 @@ mixin input(idName, value, type, name, required, placeholder)
 		label(for=idName)
 			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
 
+mixin checkbox-group(className, legend)
+	fieldset(class=className)
+		legend=legend
+		block
+
+mixin input__checkbox(idName, name, value, Title)
+	.checkbox-wrapper
+		input(type="checkbox" id=idName name=name value=value)
+		label(for=idName)=Title

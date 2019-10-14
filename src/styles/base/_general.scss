@@ -65,15 +65,22 @@ p {
 
 input {
     width: 100%;
+    max-width: $max-field;
     border-radius: 4px;
     background-color: #fff;
     padding: 13px 15px;
     font-size: 14px;
-    color: $color_dark-shade-75;
+    color: $color_dark-shade-25;
     border: 1px solid $color_dark-shade-25;
     box-shadow: none;
     outline: none;
     box-sizing: border-box;
+    transition: $transition;
+
+    &:hover, &:focus {
+        color: $color_dark-shade-75;
+        border: 1px solid $color_dark-shade-50;
+    }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: $color_dark-shade-25;
@@ -87,7 +94,22 @@ input {
     &:-moz-placeholder { /* Firefox 18- */
         color: $color_dark-shade-25;
     }
+
 }
+
+fieldset {
+    border: none;
+    padding: 0;
+
+    legend {
+        font-family: $font_main-bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $color_dark-shade-100;
+    }
+}
+
 
 button {
     border: none;
@@ -95,4 +117,23 @@ button {
     box-shadow: none;
     outline: none;
     cursor: pointer;
+}
+
+.label-content {
+    margin-bottom: 20px;
+}
+
+.ui-container {
+    @include container();
+    max-width: $max-content;
+
+    .row {
+        @include row-flex();
+        .col-4 {
+            @include col();
+            @include size(4);
+
+        }
+    }
+
 }
