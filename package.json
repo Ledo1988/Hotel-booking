@@ -65,8 +65,10 @@
         "yargs": "~13.2.4"
     },
     "dependencies": {
+        "ion-rangeslider": "^2.3.0",
         "jquery": "^3.4.1",
         "jquery-mask-plugin": "^1.14.16",
+        "jquery-ui-bundle": "^1.12.1-migrate",
         "smart-grid": "^2.1.2"
     }
 }
