@@ -78,7 +78,7 @@ input {
     box-sizing: border-box;
     transition: $transition;
 
-    &:hover, &:focus {
+    &:hover, &:focus, &.filled {
         color: $color_dark-shade-75;
         border: 1px solid $color_dark-shade-50;
     }

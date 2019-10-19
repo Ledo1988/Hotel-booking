@@ -39,10 +39,10 @@ mixin menu-item__sub(name, href, className)
 			ul.menu-main__sub-list
 				block
 
-mixin input(idName, value, type, name, required, placeholder)
+mixin input(idName, value, type, name, required, placeholder, readonly)
 	.label-content
 		label(for=idName)
-			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
+			input(id=idName value=value type=type name=name required=required placeholder=placeholder readonly=readonly)
 
 mixin fieldset-group(className, legend)
 	fieldset(class=className)
