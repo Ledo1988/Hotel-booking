@@ -1,0 +1,11 @@
+.btn-link {
+  font-family: $font_main-bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $color_purple;
+  transition: $transition;
+
+  &:hover, &:focus {
+    color: rgba(31, 32, 65, 0.5);
+  }
+}

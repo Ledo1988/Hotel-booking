@@ -1,0 +1,15 @@
+.date-dropdown-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 320px;
+
+  .date-dropdown {
+    width: 50%;
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.form-email-subscription {
+  position: relative;
+  max-width: 320px;
+
+  .label-content {
+    margin-top: 15px;
+    input {
+      padding-right: 44px;
+    }
+  }
+
+  .btn-submit-purple {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

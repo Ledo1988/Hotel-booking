@@ -1,0 +1,15 @@
+.dropdown__list-wrapper
+	if rooms
+		ul.dropdown__list
+			+dropdown-option ('Спальни', 'bedrooms','0')
+			+dropdown-option ('Кровати', 'beds', '0')
+			+dropdown-option ('Ванные комнаты', 'baths', '0')
+
+	else if guests
+		ul.dropdown__list
+			+dropdown-option ('Взрослые','adults', '0')
+			+dropdown-option ('Дети', 'children', '0')
+			+dropdown-option ('Младенцы', 'babies', '0')
+		.dropdown__list-btns
+			button(type="reset") Очистить
+			button(type="submit") Применить

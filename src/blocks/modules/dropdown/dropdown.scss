@@ -1,0 +1,33 @@
+.dropdown {
+  position: relative;
+  max-width: 320px;
+
+  &.guests, &.rooms {
+    input{
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.dropdown-main {
+  position: relative;
+  max-width: 320px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    width: 44px;
+    height: 44px;
+    @include background('/img/svg/ico_dropdown-arrow-down.svg');
+    background-size: 12px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  input {
+    color: $color_dark-shade-75;
+    cursor: pointer;
+  }
+}

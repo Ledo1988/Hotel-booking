@@ -1,0 +1,16 @@
+.date-dropdown-filter {
+  .dropdown-main {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 14px 15px;
+    font-size: 14px;
+    color: $color_dark-shade-75;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 20px;
+  }
+
+}

@@ -1,0 +1,12 @@
+.footer__copyright {
+  max-width: $max-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .footer__copyright-desc {
+    color: $color_dark-shade-75;
+  }
+
+}
