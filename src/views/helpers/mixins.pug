@@ -27,11 +27,11 @@ mixin btn-long(href, name)
 	a(class='btn-long' href=href)
 		span=name
 
-mixin menu-item(name, href)
+mixin list-item(name, href)
 	li
 		a(href=href)= name
 
-mixin menu-item__sub(name, href, className)
+mixin list-item__sub(name, href, className)
 	li
 		a(href=href class='menu-main__sub-link')
 			span=name
