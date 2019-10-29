@@ -67,3 +67,15 @@ mixin toggle(idName, Title, checked)
 		input(type="checkbox"  id=idName checked=checked class="cb-value")
 		label(for=idName)
 			span=Title
+
+mixin dropdown-option (Title, idName, value)
+	li
+		.dropdown__option
+			.title=Title
+			.counter
+				span.counter__btn.minus -
+				.counter-quantity
+					input(type="number" id=idName name="quantity" value=value)
+					label(for=idName)
+						span=value
+				span.counter__btn.plus +
