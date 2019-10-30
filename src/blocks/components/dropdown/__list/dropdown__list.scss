@@ -1,9 +1,12 @@
 .dropdown__list-wrapper {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1px);
   left: 0;
-  width: 100%;
-  height: auto;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: $color_white;
   border: 1px solid $color_dark-shade-50;
@@ -34,7 +37,21 @@
   }
 }
 
+.dropdown.active {
+
+  .dropdown__list-wrapper {
+    height: auto;
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
+    transition: opacity .2s ease-in-out;
+  }
+
+}
+
 .dropdown__list {
+
 
   li {
     margin-bottom: 7px;
@@ -69,8 +86,10 @@
         font-size: 12px;
         font-family: $font_main-bold;
         color: $color_dark-shade-100;
-        padding: 0 10px;
+        padding: 0 5px;
         line-height: 1;
+        min-width: 15px;
+        text-align: center;
         
         input {
           position: absolute;

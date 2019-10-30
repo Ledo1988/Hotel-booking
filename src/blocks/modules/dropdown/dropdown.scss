@@ -1,12 +1,22 @@
 .dropdown {
   position: relative;
   max-width: 320px;
+  overflow: hidden;
 
   &.guests, &.rooms {
     input{
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+  }
+
+  &.active {
+    overflow: visible;
+
+    input {
+      border: 1px solid $color_dark-shade-50;
+    }
+
   }
 }
 

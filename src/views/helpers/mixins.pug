@@ -73,9 +73,9 @@ mixin dropdown-option (Title, idName, value)
 		.dropdown__option
 			.title=Title
 			.counter
-				span.counter__btn.minus -
-				.counter-quantity
+				span.noselect.counter__btn.minus -
+				.noselect.counter-quantity
 					input(type="number" id=idName name="quantity" value=value)
 					label(for=idName)
 						span=value
-				span.counter__btn.plus +
+				span.noselect.counter__btn.plus +
