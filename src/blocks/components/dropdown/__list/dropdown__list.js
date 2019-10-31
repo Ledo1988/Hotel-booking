@@ -44,17 +44,16 @@ $(document).ready(function() {
 
 				if ($(this).val() == 1) {
 					dropdownMainTitle = $(dropdownMainTitle).text().replace("спальни", "спальня").replace("кровати", "кровать").replace("ванные комнаты", "ванная комната");
-					if ($(dropdownTotal).val() == 0) {
+					if (dropdownTotal == '') {
 						dropdownTotal = $(this).val() + ' ' + dropdownMainTitle;
 					} else {
 						dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + dropdownMainTitle;
 					}
 
 
-				} else if ($(this).val() < 1) {
-					return false;
-				} else {
-					dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + dropdownMainTitle;
+				} else if ($(this).val() < 1) {}
+				else {
+					dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + $(dropdownMainTitle).text();
 				}
 			});
 
