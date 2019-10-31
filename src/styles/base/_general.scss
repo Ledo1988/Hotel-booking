@@ -64,6 +64,12 @@ p {
     margin-bottom: 10px;
 }
 
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
 input {
     width: 100%;
     max-width: $max-field;
@@ -132,6 +138,172 @@ button {
 
 .label-content {
     margin-bottom: 20px;
+}
+
+.btn-like {
+    width: 38px;
+    height: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 8px;
+
+    .btn-counter {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color_dark-shade-25;
+        border-radius: 10px;
+        font-size: 10px;
+        color: $color_dark-shade-25;
+        position: relative;
+        transition: $transition;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            display: block;
+            width: 10px;
+            height: 8px;
+            @include background('/img/svg/ico_favorite-transparent.svg');
+            transition: $transition;
+        }
+
+        &::after {
+            content: attr(data-count);
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            transition: $transition;
+        }
+
+        &.active {
+            border-color: $color_purple;
+            color: $color_purple;
+
+            &::before {
+                background-image: url('/img/svg/ico_favorite-purple.svg');
+            }
+        }
+    }
+
+}
+
+.checkbox-group {
+    margin: 0;
+    margin-bottom: 33px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    label {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        position: relative;
+        color: $color_dark-shade-50;
+        cursor: pointer;
+        flex: 0 1 auto;
+
+        span {
+            max-width: 215px;
+            line-height: 130%;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            background: #FFFFFF;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: $transition;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 11px;
+            @include background('/img/svg/ico_tick-purple.svg')
+            box-sizing: border-box;
+            background-size: contain;
+            opacity: 0;
+            position: absolute;
+            left: 5px;
+            top: 3.5px;
+            transition: $transition;
+        }
+    }
+
+    input:checked + label:after {
+        opacity: 1;
+    }
+
+    input:checked + label:before {
+        border: 1px solid #BC9CFF;
+    }
+}
+
+.img-with-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    max-width: 320px;
+
+    &.img-with-desc_border {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    }
+
+    &.img-with-text_photo {
+        .img-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+        }
+
+    }
+
+    .img-wrapper {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc-wrapper {
+        .title {
+            font-family: $font_main-bold;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 .ui-container {

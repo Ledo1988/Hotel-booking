@@ -49,9 +49,9 @@ $(document).ready(function() {
 					} else {
 						dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + dropdownMainTitle;
 					}
-
-
-				} else if ($(this).val() < 1) {}
+				} else if ($(this).val() < 1) {
+					return true;
+				}
 				else {
 					dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + $(dropdownMainTitle).text();
 				}

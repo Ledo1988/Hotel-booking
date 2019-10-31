@@ -13,6 +13,10 @@ mixin link-with-span(href, className, name)
 	a(class=className href=href)
 		span= name
 
+mixin btn-like(href, className, count)
+	.btn-like
+		a(href=href class=className data-count=count)
+
 mixin btn-purple(href, name)
 	a(class='btn-purple' href=href)= name
 
@@ -56,6 +60,13 @@ mixin input__checkbox(idName, name, value, Title)
 		label(for=idName)
 			span=Title
 
+mixin input__checkbox-rich(idName, name, value, Title, Desc)
+	.checkbox-wrapper
+		input(type="checkbox" id=idName name=name value=value)
+		label(for=idName)
+			span=Title
+		span.checkbox-desc=Desc
+
 mixin input__radio(idName, name, value, Title, checked)
 	.radio-wrapper
 		input(type="radio" id=idName name=name value=value checked=checked)
@@ -79,3 +90,11 @@ mixin dropdown-option (Title, idName, value)
 					label(for=idName)
 						span=value
 				span.noselect.counter__btn.plus +
+
+mixin img-with-text (className, src, width, height, title, Title, Desc)
+	.img-with-text(class=className)
+		.img-wrapper
+			img(src=src width=width height=height title=title)
+		.desc-wrapper
+			.title=Title
+			.desc=Desc

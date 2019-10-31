@@ -4,6 +4,11 @@
   overflow: hidden;
 
   &.guests, &.rooms {
+
+    .label-content {
+      margin-bottom: 0;
+    }
+
     input{
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -34,6 +39,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
   }
 
   input {

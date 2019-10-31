@@ -67,12 +67,26 @@ block content
 					- var guests = false
 					include ../../blocks/modules/dropdown/dropdown.pug
 
+				block checkbox-list-expandable
+					include ../../blocks/modules/checkbox-list-expandable/checkbox-list-expandable.pug
+
+				block img-with-text-list
+					include ../../blocks/modules/img-with-text-list/img-with-text-list.pug
+
 			.col-4
 				h3 Dropdown Guests
 				block dropdown-guests
 					- var rooms = false
 					- var guests = true
 					include ../../blocks/modules/dropdown/dropdown.pug
+				block checkbox-rich
+					include ../../blocks/modules/checkbox-rich/checkbox-rich.pug
+				block review
+					include ../../blocks/modules/review/review.pug
+
+			.col-4
+				block bullet-list
+					include ../../blocks/modules/bullet-list/bullet-list.pug
 
 block scripts
 	script(src="../js/main.js")
