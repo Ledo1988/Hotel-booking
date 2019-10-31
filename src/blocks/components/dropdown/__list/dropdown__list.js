@@ -28,6 +28,41 @@ $(document).ready(function() {
 
 	$('body .dropdown__list .counter-quantity').on('change', 'input', function() {
 		$(this).siblings('label').find('span').html($(this).val());
+
+		$(this).parents('.dropdown').find('.dropdown-main input').change();
+
+	});
+
+	$('body .dropdown .dropdown-main').on('change', 'input', function() {
+		if ($(this).parents('.dropdown').hasClass('rooms')) {
+			$(this).val('');
+			var dropdownTotal = $(this).val();
+			var dropdownInput = $(this).parents('.dropdown').find('.dropdown__list input');
+
+			$(dropdownInput).each(function () {
+				var dropdownMainTitle = $(this).parents('.dropdown__option').find('.title');
+
+				if ($(this).val() == 1) {
+					dropdownMainTitle = $(dropdownMainTitle).text().replace("спальни", "спальня").replace("кровати", "кровать").replace("ванные комнаты", "ванная комната");
+					if ($(dropdownTotal).val() == 0) {
+						dropdownTotal = $(this).val() + ' ' + dropdownMainTitle;
+					} else {
+						dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + dropdownMainTitle;
+					}
+
+
+				} else if ($(this).val() < 1) {
+					return false;
+				} else {
+					dropdownTotal = dropdownTotal + ' ,' + $(this).val() + ' ' + dropdownMainTitle;
+				}
+			});
+
+			$(this).val(dropdownTotal);
+		} else if ($(this).parents('.dropdown').hasClass('guests')) {
+
+		}
+
 	});
 
 });
