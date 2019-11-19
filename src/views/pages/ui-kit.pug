@@ -19,6 +19,8 @@ block content
 				block input-date-mask
 					include ../../blocks/modules/input-date-mask/input-date-mask.pug
 				block date-dropdown
+					- dateDropdownTitle_1 = 'Date Dropdown'
+					- dateDropdownTitle_2 = 'Date Dropdown'
 					include ../../blocks/modules/date-dropdown/date-dropdown.pug
 				h3 Filter date dropdown
 				block date-dropdown-filter
@@ -81,12 +83,20 @@ block content
 					include ../../blocks/modules/dropdown/dropdown.pug
 				block checkbox-rich
 					include ../../blocks/modules/checkbox-rich/checkbox-rich.pug
-				block review
+				block <review></review>
 					include ../../blocks/modules/review/review.pug
 
 			.col-4
 				block bullet-list
 					include ../../blocks/modules/bullet-list/bullet-list.pug
+	.ui-container.cards
+		.row
+			.col-4
+
+				block card_room-search
+					include ../../blocks/modules/card/_room-search/card_room-search.pug
+
+
 
 block scripts
 	script(src="../js/main.js")
