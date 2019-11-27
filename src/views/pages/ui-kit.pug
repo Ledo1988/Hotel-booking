@@ -12,12 +12,12 @@ block content
 					h3 Text field
 					+input('email', '', 'email', 'email', 'required', 'Email')
 					block dropdown
-						- var dropdownTitle = 'Dropdown'
-						- var rooms = false
-						- var guests = false
+						- dropdownTitle = 'Dropdown'
+						- rooms = false
+						- guests = false
 						include ../../blocks/modules/dropdown/dropdown.pug
-					h3 Masked text field
 					block input-date-mask
+						- maskDropdown__title = 'Masked text field'
 						include ../../blocks/modules/input-date-mask/input-date-mask.pug
 					block date-dropdown
 						- dateDropdownTitle_1 = 'Date Dropdown'
@@ -34,9 +34,22 @@ block content
 				.col-4
 					block checkbox-options
 						include ../../blocks/modules/checkbox-options/checkbox-options.pug
+					h3 RADIO BUTTONS
 					block radio-options
+						- radioId_1 = 'radio_man'
+						- value_1 = 'Мужчина'
+						- radioId_2 = 'radio_woman'
+						- value_2 = 'Женщина'
 						include ../../blocks/modules/radio-options/radio-options.pug
 					block toggle
+						h3 Toggle
+						- toggleId = 'toggle1'
+						- toggleChecked = false
+						- toggleTitle = 'Получать спецпредложения'
+						include ../../blocks/modules/toggle/toggle.pug
+						- toggleId = 'toggle2'
+						- toggleChecked = true
+						- toggleTitle = 'Получать спецпредложения'
 						include ../../blocks/modules/toggle/toggle.pug
 
 					block btn-like
@@ -65,9 +78,9 @@ block content
 			.row
 				.col-4
 					block dropdown-rooms
-						- var dropdownTitle = 'Dropdown Rooms'
-						- var rooms = true
-						- var guests = false
+						- dropdownTitle = 'Dropdown Rooms'
+						- rooms = true
+						- guests = false
 						include ../../blocks/modules/dropdown/dropdown.pug
 
 					block checkbox-list-expandable
@@ -78,9 +91,9 @@ block content
 
 				.col-4
 					block dropdown-guests
-						- var dropdownTitle = 'Dropdown Guests'
-						- var rooms = false
-						- var guests = true
+						- dropdownTitle = 'Dropdown Guests'
+						- rooms = false
+						- guests = true
 						include ../../blocks/modules/dropdown/dropdown.pug
 					block checkbox-rich
 						include ../../blocks/modules/checkbox-rich/checkbox-rich.pug
@@ -94,9 +107,11 @@ block content
 		.ui-container.cards
 			.row
 				.col-4
-
 					block card_room-search
 						include ../../blocks/modules/card/__room-search/card__room-search.pug
+
+					block card_registration
+						include ../../blocks/modules/card/__registration/card__registration.pug
 
 
 

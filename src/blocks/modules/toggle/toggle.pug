@@ -1,4 +1,8 @@
-.toggle-wrapper
-	h3 Toggle
-	+toggle('toggle1', 'Получать спецпредложения', '')
-	+toggle('toggle2', 'Получать спецпредложения')
+- var toggleId
+- var toggleChecked
+- var toggleTitle
+
+.toggle-btn
+	input(type="checkbox"  id='' + toggleId checked=toggleChecked)
+	label(for='' + toggleId)
+		span #{toggleTitle }

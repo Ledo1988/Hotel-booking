@@ -1,3 +1,18 @@
-+fieldset-group('radio-group', 'Radio Buttons')
-	+input__radio('radio_man', 'sex', 'Мужчина', 'Мужчина', '')
-	+input__radio('radio_woman', 'sex', 'Женщина', 'Женщина')
+- var radioGroup
+- var radioId_1
+- var value_1
+- var radioId_2
+- var value_2
+
+fieldset(class="radio-group")
+	.fieldset-group-wrapper
+		.radio-wrapper
+			input(type="radio" id="" + radioId_1 name="sex" value="" + value_1 checked="")
+			label(for="" + radioId_1)
+				span #{value_1}
+		.radio-wrapper
+			input(type="radio" id="" + radioId_2 name="sex" value="" + value_1 checked="")
+			label(for="" + radioId_2)
+				span #{value_2}
+
+

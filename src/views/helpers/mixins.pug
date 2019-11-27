@@ -48,9 +48,8 @@ mixin input(idName, value, type, name, required, placeholder, readonly)
 		label(for=idName)
 			input(id=idName value=value type=type name=name required=required placeholder=placeholder readonly=readonly)
 
-mixin fieldset-group(className, legend)
+mixin fieldset-group(className)
 	fieldset(class=className)
-		legend=legend
 		.fieldset-group-wrapper
 			block
 
@@ -75,7 +74,7 @@ mixin input__radio(idName, name, value, Title, checked)
 
 mixin toggle(idName, Title, checked)
 	.toggle-btn
-		input(type="checkbox"  id=idName checked=checked class="cb-value")
+		input(type="checkbox"  id=idName checked=checked)
 		label(for=idName)
 			span=Title
 
