@@ -12,6 +12,7 @@
   align-items: center;
   transition: $transition;
   max-width: 320px;
+  box-sizing: border-box;
 
   span {
     flex-grow: 1;

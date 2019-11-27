@@ -1,25 +1,17 @@
+
+
 .dropdown {
   position: relative;
   max-width: 320px;
   overflow: hidden;
-
-  &.guests, &.rooms {
-
-    .label-content {
-      margin-bottom: 0;
-    }
-
-    input{
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
 
   &.active {
     overflow: visible;
 
     input {
       border: 1px solid $color_dark-shade-50;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
   }

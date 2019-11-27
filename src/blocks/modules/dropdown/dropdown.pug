@@ -1,8 +1,10 @@
-//- var guests
-//- var rooms
+- var guests
+- var rooms
+- var dropdownTitle
 
 if guests
 	form(class='form-dropdown-guests' action='/action_page.php' method='get')
+		.dropdown__title #{dropdownTitle}
 		.dropdown.guests
 			.dropdown-main
 				+input('dropdown', '', 'text', 'text', 'required', 'Сколько гостей', 'readonly')
@@ -10,10 +12,12 @@ if guests
 
 else if rooms
 	.dropdown.rooms
+		.dropdown__title #{dropdownTitle}
 		.dropdown-main
 			+input('dropdown', '', 'text', 'text', 'required', 'Сколько комнат', 'readonly')
 		include ../../components/dropdown/__list/dropdown__list.pug
 else
 	.dropdown
+		.dropdown__title #{dropdownTitle}
 		.dropdown-main
 			+input('dropdown', 'Сколько гостей', 'text', 'text', 'required', 'Сколько гостей', 'readonly')
