@@ -1,0 +1,12 @@
+header
+	nav.nav-bar
+		div(class='nav-bar-wrap')
+			block logo
+				include ../logo/logo.pug
+
+			block menu-main
+				include ../menu-main/menu-main
+
+			div(class='nav-bar__btns')
+				+btn-transparent('/login', 'Войти')
+				+btn-purple('/register', 'Зарегистрироваться')

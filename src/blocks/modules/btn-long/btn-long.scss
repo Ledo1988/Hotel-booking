@@ -1,0 +1,32 @@
+.btn-long {
+  font-family: $font_main-bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  color: $color_white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: $transition;
+  max-width: 320px;
+  box-sizing: border-box;
+
+  span {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    @include background('/img/svg/ico_arrow-right-white.svg');
+  }
+
+  &:hover, &:focus {
+    opacity: 0.5;
+  }
+}

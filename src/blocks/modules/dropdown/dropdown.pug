@@ -1,0 +1,23 @@
+- var guests
+- var rooms
+- var dropdownTitle
+
+if guests
+	form(class='form-dropdown-guests' action='/action_page.php' method='get')
+		.input__title #{dropdownTitle}
+		.dropdown.guests
+			.dropdown-main
+				+input('dropdown', '', 'text', 'text', 'required', 'Сколько гостей', 'readonly')
+			include ../../components/dropdown/__list/dropdown__list.pug
+
+else if rooms
+	.dropdown.rooms
+		.input__title #{dropdownTitle}
+		.dropdown-main
+			+input('dropdown', '', 'text', 'text', 'required', 'Сколько комнат', 'readonly')
+		include ../../components/dropdown/__list/dropdown__list.pug
+else
+	.dropdown
+		.input__title #{dropdownTitle}
+		.dropdown-main
+			+input('dropdown', 'Сколько гостей', 'text', 'text', 'required', 'Сколько гостей', 'readonly')

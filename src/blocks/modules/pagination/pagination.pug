@@ -1,0 +1,12 @@
+.pagination
+	ul.pagination-list
+		li.pagination-prev-item
+			+link-with-img('/', '', 'img/svg/ico_arrow-right-white.svg', '18', '18', 'Стрелка')
+		li.pagination-current-item 1
+		+list-item('2', '/2')
+		+list-item('3', '/3')
+		+list-item('...', '')
+		+list-item('15', '/15')
+		li.pagination-next-item
+			+link-with-img('/15', '', 'img/svg/ico_arrow-right-white.svg', '18', '18', 'Стрелка')
+	.pagination-result 1 – 12 из 100+ вариантов аренды

@@ -1,0 +1,13 @@
+- var dateDropdownTitle_1
+- var dateDropdownTitle_2
+
+.date-dropdown-wrapper
+	.date-dropdown
+		.input__title #{dateDropdownTitle_1}
+		.dropdown-main
+			+input('date-drop-1', '', 'text', 'date', 'required', 'ДД.ММ.ГГГГ')
+	.date-dropdown
+		.input__title #{dateDropdownTitle_2}
+		.dropdown-main
+			+input('date-drop-2', '', 'text', 'date', 'required', 'ДД.ММ.ГГГГ')
+

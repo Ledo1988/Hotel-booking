@@ -1,0 +1,36 @@
+.footer__main-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  .footer__main-menu-list-wrap {
+    min-width: 150px;
+    margin-right: 50px;
+
+    .footer__main-menu-list li {
+      margin-bottom: 20px;
+
+      a {
+        color: $color_dark-shade-50;
+        transition: $transition;
+
+
+        &:hover, &:focus {
+          color: $color_dark-shade-75;
+        }
+      }
+    }
+  }
+}
+
+.footer__main {
+  .main__title {
+    display: block;
+    font-family: $font_main-bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $color_dark-shade-100;
+    margin-bottom: 20px;
+  }
+}
+

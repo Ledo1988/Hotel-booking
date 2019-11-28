@@ -1,0 +1,43 @@
+.btn-transparent {
+  font-family: $font_main-bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  box-sizing: border-box;
+  color: $color_purple;
+  padding: 2px;
+  border-radius: 22px;
+  opacity: 1;
+  transition: $transition;
+  background: transparent;
+  z-index: 0;
+
+  &:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    transition: $transition;
+  }
+
+  span {
+    color: $color_purple;
+    padding: 15px 20px;
+    background: $color_white;
+    transition: $transition;
+    border-radius: inherit;
+    $bt_border: 2px;
+    z-index: 1;
+  }
+
+  &:hover, &:focus {
+    &:before {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.btn-rate-list-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-rate-wrapper {
+  margin-bottom: 40px;
+
+  .btn-rate-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 20px;
+
+    .btn-rate {
+      display: block;
+      width: 24px;
+      height: 24px;
+      @include background('/img/svg/ico_rate-transparent.svg');
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover, &.active, &.hover {
+        background-image: url('/img/svg/ico_rate-purple.svg');
+        transition: $transition;
+      }
+    }
+  }
+}
